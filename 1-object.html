@@ -8,13 +8,24 @@
   <body>
     <script>
       // oop sebelum ecmascript 6 adalah menggunakan constructor function, contoh
-      function Person() {}
+      // property di constructor function
+      function Person() {
+        this.firstName = "";
+        this.lastName = "";
+      }
 
-      function NamePerson() {}
+      // diawali dengan huruf besar
+      function NewPerson() {}
 
       const eko = new Person();
+      eko.firstName = "Muhammad";
+      eko.lastName = "Eko";
+
       const budi = new Person();
-      const iskandar = new NamaPerson();
+      budi.firstName = "Budi";
+
+      console.log(eko);
+      console.log(budi);
 
       // bukan lagi seperti dibawah ini
       // const eko = {}
