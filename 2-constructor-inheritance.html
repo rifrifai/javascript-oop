@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor Inheritance</title>
+  </head>
+  <body>
+    <script>
+      // Inheritance atau pewarisan, contoh
+      function Employee(firstName) {
+        this.firstName = firstName;
+        this.sayHi = function (name) {
+          console.info(`Apa kabar ${name}, Namaku adalah ${this.firstName}`);
+        };
+      }
+
+      function Manager(firstName, lastName) {
+        this.lastName = lastName;
+        Employee.call(this, firstName);
+      }
+
+      const farrell = new Manager("Farrell", "Miftachul");
+      console.info(farrell);
+    </script>
+  </body>
+</html>
