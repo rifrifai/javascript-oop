@@ -12,6 +12,9 @@
       function Person() {
         this.firstName = "";
         this.lastName = "";
+        this.sayHi = function (name) {
+          console.info(`Hai ${name}!, Namaku ${this.firstName}`);
+        };
       }
 
       // diawali dengan huruf besar
@@ -20,9 +23,11 @@
       const eko = new Person();
       eko.firstName = "Muhammad";
       eko.lastName = "Eko";
+      eko.sayHi("Raka");
 
       const budi = new Person();
       budi.firstName = "Budi";
+      budi.sayHi("Joko");
 
       console.log(eko);
       console.log(budi);
