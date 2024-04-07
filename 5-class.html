@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class di JS</title>
+  </head>
+  <body>
+    <script>
+      // contoh pembuatan class sangat simple
+      class Person {}
+
+      // penambahan prototype pada class
+      Person.prototype.sayHi = function (name) {
+        console.info(`Hai ${name}, Apa kabar?`);
+      };
+
+      const farrell = new Person();
+      console.info(farrell);
+    </script>
+  </body>
+</html>
