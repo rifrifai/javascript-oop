@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Constructor Class</title>
+  </head>
+  <body>
+    <script>
+      // super berfungsi untuk memanggil this yang telah di deklarasikan sebelumnya atau inheritance
+      class Employee {
+        constructor(firstName) {
+          this.firstName = firstName;
+        }
+
+        sayHi(name) {
+          console.info(`Hai ${name}, Nama ku employee ${this.firstName}`);
+        }
+      }
+
+      class Manager extends Employee {
+        constructor(firstName, lastName) {
+          super(firstName);
+          this.lastName = lastName;
+        }
+
+        sayHi(name) {
+          console.info(
+            `Hai ${name}, Nama ku manager ${this.firstName} ${this.lastName}`
+          );
+        }
+      }
+
+      const putra = new Employee("Putra");
+      putra.sayHi("Putri");
+
+      const putri = new Manager("Putri", "Firdaus");
+      putri.sayHi("Putra");
+    </script>
+  </body>
+</html>
