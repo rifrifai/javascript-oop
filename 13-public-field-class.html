@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Field Class</title>
+  </head>
+  <body>
+    <script>
+      class Customer {
+        // menempelnya di instance, bukan di proto
+        firstName;
+        lastName;
+        balance = 0;
+
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        sayHi(name) {
+          console.info(
+            `Hai ${name}, Nama saya ${this.firstName} ${this.lastName}`
+          );
+        }
+      }
+
+      const tyas = new Customer("Diah", "Arum");
+      // tyas.firstName = "Tyas";
+      // tyas.lastName = "Marming";
+      console.info(tyas);
+      tyas.sayHi("Joko");
+    </script>
+  </body>
+</html>
