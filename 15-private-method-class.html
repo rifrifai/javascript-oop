@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Method di Class</title>
+  </head>
+  <body>
+    <script>
+      // cara penggunakan private method di class (tanda #)
+      class Person {
+        say(name) {
+          if (name) {
+            this.#withName(name);
+          } else {
+            this.#noNime();
+          }
+        }
+
+        #withName(name) {
+          console.info(`Apa kabarmu ${name}?`);
+        }
+
+        #noNime() {
+          console.info("Hai friend, Apa kabar?");
+        }
+      }
+
+      const eko = new Person("Eko");
+      eko.say("Joko");
+      eko.say();
+
+      // eko.#withName = "Error";
+    </script>
+  </body>
+</html>
