@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance di Class</title>
+  </head>
+  <body>
+    <script>
+      // inheritance atau pewarisan caranya menggunakan extends
+      // harus paham mengenai prototype
+      class Manager {
+        sayHi(name) {
+          console.info(`Hai ${name}, My name is manager ${this.name}`);
+        }
+      }
+      class Employee extends Manager {
+        // sayHi(name) {
+        //   console.info(`Hai ${name}, My name is employee ${this.name}`);
+        // }
+      }
+
+      const putri = new Manager();
+      putri.name = "Putri";
+      putri.sayHi("Putra");
+
+      const putra = new Employee();
+      putra.name = "Putra";
+      putra.sayHi("Putri");
+    </script>
+  </body>
+</html>
