@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method pada Class</title>
+  </head>
+  <body>
+    <script>
+      // menambah method ke class sama dengan menambahkan method ke prototype nya bukan di instance objectnya
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+
+        sayHi(name) {
+          console.info(`Hai ${name}, Namaku ${this.name}`);
+        }
+      }
+
+      const putra = new Person("Putra");
+      console.info(putra);
+      putra.sayHi("Joko");
+
+      const putri = new Person("Putri");
+      console.info(putri);
+      putri.sayHi("Joko");
+    </script>
+  </body>
+</html>
