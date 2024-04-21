@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Field</title>
+  </head>
+  <body>
+    <script>
+      // belajar static field
+      // kalau dikasih static maka tidak bisa di akses di instance objectnya
+      class Configuration {
+        static name = "Learn OOP JavaScript";
+        static version = 1.1;
+        static author = "Programmer Santri";
+      }
+
+      // instance object
+      const config = new Configuration();
+      console.info(config);
+      console.info(config.name); //undefined
+
+      // mengubah static field
+      Configuration.name = "Belajar JavaScript OOP";
+
+      // cara mengakses static field
+      console.info(Configuration.name);
+      console.info(Configuration.version);
+      console.info(Configuration.author);
+    </script>
+  </body>
+</html>
