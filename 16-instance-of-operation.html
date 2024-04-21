@@ -5,5 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instance Of</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      // bukan seperti ini cara nya, jadi typeof tidak digunakan untuk mengecek dia hasil dari instansi class apa
+      class Fiture {}
+
+      class Index {}
+
+      const ahmad = new Fiture();
+      const ahsan = new Index();
+
+      console.info(typeof ahmad);
+      console.info(typeof ahsan);
+
+      // mengecek sebuah object instance itu dibuat dari class apa
+      // cara nya seperti dibawah ini
+      console.info(ahmad instanceof Fiture);
+      console.info(ahmad instanceof Index);
+      console.info(ahsan instanceof Fiture);
+      console.info(ahsan instanceof Index);
+    </script>
+  </body>
 </html>
