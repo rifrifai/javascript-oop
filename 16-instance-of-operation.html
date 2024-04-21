@@ -20,10 +20,23 @@
 
       // mengecek sebuah object instance itu dibuat dari class apa
       // cara nya seperti dibawah ini
-      console.info(ahmad instanceof Fiture);
-      console.info(ahmad instanceof Index);
-      console.info(ahsan instanceof Fiture);
-      console.info(ahsan instanceof Index);
+      console.info(ahmad instanceof Fiture); // true
+      console.info(ahmad instanceof Index); // false
+      console.info(ahsan instanceof Fiture); // false
+      console.info(ahsan instanceof Index); // true
+
+      // inheritance
+      class Employee {}
+
+      class Manager extends Employee {}
+
+      const budi = new Employee();
+      const faiz = new Manager();
+
+      console.info(budi instanceof Employee); // true
+      console.info(budi instanceof Manager); // false
+      console.info(faiz instanceof Employee); // true
+      console.info(faiz instanceof Manager); // true
     </script>
   </body>
 </html>
