@@ -28,6 +28,9 @@
         // catch akan di eksekusi jika terjadi error di try
       } catch (error) {
         console.info(`Terjadi Error : ${error.message}`);
+        // finally ini akan selalu di eksekusi meskipun terjadi error/ tidak
+      } finally {
+        console.info("Program Selesai!");
       }
 
       // program selanjutnya tetap akan di eksekusi meskipun ada yang error sebelumnya
